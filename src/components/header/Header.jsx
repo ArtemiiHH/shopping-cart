@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={styles.myheader}>
       <NavBar></NavBar>
-      <h1>Logo</h1>
+      <h1>wwwatch.com</h1>
       <button>Cart</button>
     </header>
   );
