@@ -7,17 +7,26 @@ export default function Card({ image, title, price }) {
 
   // Increment count
   function increaseCount() {
+    // Original item price
     const originalPrice = price;
+    // Increment count
     setCount((prev) => prev + 1);
     setItemPrice(originalPrice + itemPrice);
   }
 
   // Decrement count
   function decreaseCount() {
+    // Original item price
     const originalPrice = price;
-    if (count > 0) {
+    if (count > 1) {
+      // Decrement count
       setCount((prev) => prev - 1);
-      setItemPrice(itemPrice - originalPrice);
+      // If item price is lower than original, keep original price
+      if (itemPrice > originalPrice) {
+        setItemPrice(itemPrice - originalPrice);
+      } else {
+        return originalPrice;
+      }
     }
   }
 
