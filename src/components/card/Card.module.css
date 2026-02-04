@@ -1,5 +1,9 @@
 .card {
   background-color: gray;
+  height: 400px;
+  width: 400px;
+}
+
+.image {
   height: 200px;
-  width: 200px;
 }
