@@ -4,7 +4,7 @@ import { Link } from "react-router";
 
 export default function Header() {
   return (
-    <header className={styles.myheader}>
+    <header className={styles.header}>
       <NavBar></NavBar>
       <h1 className="logo">
         <Link to="/">wwwatch.com</Link>
