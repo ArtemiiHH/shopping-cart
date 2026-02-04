@@ -9,9 +9,11 @@ export default function Header() {
       <h1 className="logo">
         <Link to="/">wwwatch.com</Link>
       </h1>
-      <button>
-        <Link to="cart">Cart</Link>
-      </button>
+      <ul>
+        <li>
+          <Link to="cart">Cart</Link>
+        </li>
+      </ul>
     </header>
   );
 }

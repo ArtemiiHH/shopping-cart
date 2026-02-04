@@ -7,8 +7,14 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  padding: 30px;
+  /* padding: 30px; */
   gap: 20px;
   height: auto;
   justify-content: center;
+  list-style: none;
+}
+
+.title {
+  margin: 0 auto;
+  padding: 20px;
 }

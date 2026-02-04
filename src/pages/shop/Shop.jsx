@@ -14,11 +14,11 @@ export default function Shop() {
 
   return (
     <section className={styles.shop}>
-      <h2>Items</h2>
+      <h2 className={styles.title}>Items</h2>
       <div className={styles.grid}>
         {watches.map((watch) => (
           <li key={watch.id}>
-            <Card image={watch.thumbnail}></Card>
+            <Card image={watch.thumbnail} title={watch.title}></Card>
           </li>
         ))}
       </div>

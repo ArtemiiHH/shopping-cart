@@ -1,7 +1,17 @@
 .card {
-  background-color: gray;
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
   height: 400px;
   width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 .image {
