@@ -1,10 +1,6 @@
 import styles from "./Content.module.css";
-import Home from "../../pages/Home";
+import { Outlet } from "react-router";
 
-export default function Content() {
-  return (
-    <section className={styles.mycontent}>
-      <Home></Home>
-    </section>
-  );
+export default function Content({ children }) {
+  return <section className={styles.mycontent}>{children}</section>;
 }

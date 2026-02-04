@@ -1,11 +1,16 @@
 import styles from "./NavBar.module.css";
+import { Link } from "react-router";
 
 export default function NavBar() {
   return (
     <nav className={styles.mynavbar}>
       <ul>
-        <li>Home</li>
-        <li>Store</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="shop">Shop</Link>
+        </li>
       </ul>
     </nav>
   );

@@ -1,6 +1,9 @@
 // Import styles
 import "./App.css";
 
+// Import Outlet
+import { Outlet } from "react-router";
+
 // Import components
 import Header from "./components/header/Header";
 import Content from "./components/content/Content";
@@ -10,7 +13,9 @@ function App() {
   return (
     <>
       <Header></Header>
-      <Content></Content>
+      <Content>
+        <Outlet />
+      </Content>
       <Footer></Footer>
     </>
   );
