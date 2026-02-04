@@ -40,6 +40,7 @@ export default function Card({ image, title, price }) {
         <h3>{count}</h3>
         <button onClick={increaseCount}>+</button>
       </div>
+      <button className={styles.addCartBtn}>Add to cart</button>
     </div>
   );
 }
