@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <NavBar></NavBar>
-      <h1 className="logo">
+      <h1 className={styles.logo}>
         <Link to="/">wwwatch.com</Link>
       </h1>
       <ul>

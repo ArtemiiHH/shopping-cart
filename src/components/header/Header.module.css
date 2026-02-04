@@ -5,6 +5,11 @@
   border-bottom: 1px solid black;
 }
 
+.logo {
+  justify-self: center;
+  align-self: center;
+}
+
 .header ul {
   display: flex;
   justify-content: flex-start;
