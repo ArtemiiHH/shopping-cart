@@ -15,7 +15,7 @@ function App() {
   // Add item to cart
   function addItem(product, qty = 1) {
     setCartItems((prev) => {
-      const index = prev.findIndex((p) => p.id === product.id);
+      const index = prev.findIndex((i) => i.id === product.id);
 
       if (index !== -1) {
         const updated = [...prev];
