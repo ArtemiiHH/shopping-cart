@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Card.module.css";
 
-export default function Card({ image, title, price }) {
+export default function Card({ image, title, price, id, addItem }) {
   const [count, setCount] = useState(1);
   const [itemPrice, setItemPrice] = useState(price);
 
@@ -40,7 +40,9 @@ export default function Card({ image, title, price }) {
         <h3>{count}</h3>
         <button onClick={increaseCount}>+</button>
       </div>
-      <button className={styles.addCartBtn}>Add to cart</button>
+      <button onClick={() => addItem(id)} className={styles.addCartBtn}>
+        Add to cart
+      </button>
     </div>
   );
 }

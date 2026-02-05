@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import Card from "../../components/card/Card";
 import styles from "./Shop.module.css";
+import { useOutletContext } from "react-router";
 
 export default function Shop() {
   const [watches, setWatches] = useState([]);
+  const { addItem } = useOutletContext();
 
   useEffect(() => {
     fetch("https://dummyjson.com/products/search?q=watch")
@@ -17,13 +19,15 @@ export default function Shop() {
       <h2 className={styles.title}>Items</h2>
       <div className={styles.grid}>
         {watches.map((watch) => (
-          <li key={watch.id}>
+          <div key={watch.id}>
             <Card
               image={watch.thumbnail}
               title={watch.title}
               price={watch.price}
+              id={watch.id}
+              addItem={addItem}
             ></Card>
-          </li>
+          </div>
         ))}
       </div>
     </section>

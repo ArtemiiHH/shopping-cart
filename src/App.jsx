@@ -15,7 +15,7 @@ function App() {
   // Add item to cart
   function addItem(itemId) {
     setCartItems((prev) => {
-      [...prev, itemId];
+      return [...prev, itemId];
     });
   }
 
@@ -26,7 +26,7 @@ function App() {
     <>
       <Header cartItems={cartItems}></Header>
       <Content>
-        <Outlet />
+        <Outlet context={{addItem}} />
       </Content>
       <Footer></Footer>
     </>
