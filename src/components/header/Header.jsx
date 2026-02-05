@@ -12,7 +12,7 @@ export default function Header({ cartItems }) {
       <ul>
         <li>
           <Link to="cart">
-            {cartItems.length === 0 ? "Cart" : `Cart (${cartItems})`}
+            {cartItems.length === 0 ? "Cart" : `Cart (${cartItems.length})`}
           </Link>
         </li>
       </ul>
