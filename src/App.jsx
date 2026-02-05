@@ -13,9 +13,21 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
 
   // Add item to cart
-  function addItem(itemId) {
+  function addItem(product, qty = 1) {
     setCartItems((prev) => {
-      return [...prev, itemId];
+      const index = prev.findIndex((p) => p.id === product.id);
+
+      if (index !== -1) {
+        const updated = [...prev];
+        updated[index] = {
+          ...updated[index],
+          qty: updated[index].qty + qty,
+        };
+
+        return updated;
+      }
+
+      return [...prev, { ...product, qty }];
     });
   }
 

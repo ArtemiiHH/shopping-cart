@@ -11,7 +11,9 @@ export default function Cart() {
         {/* Show empty text */}
         {cartItems.length === 0 ? <h3>Your cart is empty</h3> : <div></div>}
         {cartItems.map((item) => (
-          <div key={item.id} className={styles.item}>{console.log(item)}</div>
+          <div key={item.id} className={styles.item}>
+            <img src={item.thumbnail} alt="" />
+          </div>
         ))}
       </div>
     </section>
