@@ -5,3 +5,9 @@
   align-items: center;
   height: 100vh;
 }
+
+.item {
+  background-color: gray;
+  height: 200px;
+  width: 100%;
+}
