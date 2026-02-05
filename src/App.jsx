@@ -26,7 +26,7 @@ function App() {
     <>
       <Header cartItems={cartItems}></Header>
       <Content>
-        <Outlet context={{addItem}} />
+        <Outlet context={{ addItem, cartItems }} />
       </Content>
       <Footer></Footer>
     </>
