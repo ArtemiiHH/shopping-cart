@@ -2,7 +2,7 @@ import NavBar from "../navbar/NavBar";
 import styles from "./Header.module.css";
 import { Link } from "react-router";
 
-export default function Header() {
+export default function Header({ cartItems }) {
   return (
     <header className={styles.header}>
       <NavBar></NavBar>
@@ -11,7 +11,9 @@ export default function Header() {
       </h1>
       <ul>
         <li>
-          <Link to="cart">Cart</Link>
+          <Link to="cart">
+            {cartItems.length === 0 ? "Cart" : `Cart (${cartItems})`}
+          </Link>
         </li>
       </ul>
     </header>

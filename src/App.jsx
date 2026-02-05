@@ -1,8 +1,7 @@
-// Import styles
+// Imports
 import "./App.css";
-
-// Import Outlet
 import { Outlet } from "react-router";
+import { useState } from "react";
 
 // Import components
 import Header from "./components/header/Header";
@@ -13,15 +12,19 @@ function App() {
   // Cart items list
   const [cartItems, setCartItems] = useState([]);
 
-  // Add item to cart 
-  function addItem(itemId) {}
+  // Add item to cart
+  function addItem(itemId) {
+    setCartItems((prev) => {
+      [...prev, itemId];
+    });
+  }
 
   // Remove item from cart
   function removeItem(itemId) {}
 
   return (
     <>
-      <Header></Header>
+      <Header cartItems={cartItems}></Header>
       <Content>
         <Outlet />
       </Content>
