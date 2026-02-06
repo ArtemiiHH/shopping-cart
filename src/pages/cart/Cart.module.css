@@ -1,6 +1,6 @@
 .grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 80vh;
@@ -8,9 +8,7 @@
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
+  display: flex;
   align-items: center;
   background-color: rgb(235, 235, 235);
   border-radius: 20px;
@@ -22,3 +20,18 @@
   justify-self: center;
   align-self: center;
 }
+
+.totalBox {
+  background-color: rgb(235, 235, 235);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+  height: auto;
+  width: 50%;
+}
+
+/* .totalBox * {
+  margin: 0;
+} */
