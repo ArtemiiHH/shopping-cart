@@ -20,13 +20,7 @@ export default function Shop() {
       <div className={styles.grid}>
         {watches.map((watch) => (
           <div key={watch.id}>
-            <Card
-              image={watch.thumbnail}
-              title={watch.title}
-              price={watch.price}
-              id={watch.id}
-              addItem={addItem}
-            ></Card>
+            <Card product={watch} addItem={addItem}></Card>
           </div>
         ))}
       </div>
