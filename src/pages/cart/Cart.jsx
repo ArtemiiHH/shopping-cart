@@ -16,25 +16,27 @@ export default function Cart() {
           // Each card
           cartItems.map((item) => (
             <>
-              <div key={item.cardItemId} className={styles.card}>
-                {/* Item Image */}
-                <img src={item.thumbnail} alt={item.title} />
-                <div>
-                  {/* Item title */}
-                  <h3>{item.title}</h3>
-                  {/* Item price */}
-                  <h4>Total price: ${item.price * item.qty}</h4>
-                  {/* Item quantity */}
-                  <p>Quantity: {item.qty}</p>
+              <div className={styles.grid}>
+                <div key={item.cardItemId} className={styles.card}>
+                  {/* Item Image */}
+                  <img src={item.thumbnail} alt={item.title} />
+                  <div>
+                    {/* Item title */}
+                    <h3>{item.title}</h3>
+                    {/* Item price */}
+                    <h4>Total price: ${item.price * item.qty}</h4>
+                    {/* Item quantity */}
+                    <p>Quantity: {item.qty}</p>
+                  </div>
                 </div>
-              </div>
-              <div className={styles.totalBox}>
-                {/* Order summary */}
-                <h2>Order summary:</h2>
-                {/* Total price */}
-                <h3>{`Total: $${item.price * item.qty}`}</h3>
-                {/* Subtotal */}
-                <p>{`Subtotal x (${item.qty} items)`}</p>
+                <div className={styles.totalBox}>
+                  {/* Order summary */}
+                  <h2>Order summary:</h2>
+                  {/* Total price */}
+                  <h3>{`Total:$${item.price * item.qty}`}</h3>
+                  {/* Subtotal */}
+                  <p>{`Subtotal x (${item.qty} items)`}</p>
+                </div>
               </div>
             </>
           ))
