@@ -22,7 +22,7 @@ export default function Cart() {
                 {/* Item title */}
                 <h3>{item.title}</h3>
                 {/* Item price */}
-                <h4>${item.totalPrice}</h4>
+                <h4>Total price: ${item.price * item.qty}</h4>
                 {/* Item quantity */}
                 <p>Quantity: {item.qty}</p>
               </div>
