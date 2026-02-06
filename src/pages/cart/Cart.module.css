@@ -1,9 +1,9 @@
 .grid {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  height: 100vh;
+  min-height: 80vh;
   gap: 20px;
 }
 
@@ -16,4 +16,9 @@
   border-radius: 20px;
   height: auto;
   min-width: 40%;
+}
+
+.emptyText {
+  justify-self: center;
+  align-self: center;
 }
