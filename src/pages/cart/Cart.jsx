@@ -14,8 +14,13 @@ export default function Cart() {
           <h3>Your cart is empty</h3>
         ) : (
           cartItems.map((item) => (
-            <div key={item.id} className={styles.item}>
+            <div key={item.id} className={styles.card}>
               <img src={item.thumbnail} alt={item.title} />
+              <div>
+                <h3>{item.title}</h3>
+                <h4>${item.price.toFixed(2)}</h4>
+                <p>Quantity: {cartItems.length}</p>
+              </div>
             </div>
           ))
         )}
