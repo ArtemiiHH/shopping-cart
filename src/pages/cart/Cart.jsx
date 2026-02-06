@@ -13,13 +13,18 @@ export default function Cart() {
         {cartItems.length === 0 ? (
           <h3 className={styles.emptyText}>Your cart is empty</h3>
         ) : (
+          // Each card
           cartItems.map((item) => (
             <div key={item.id} className={styles.card}>
+              {/* Item Image */}
               <img src={item.thumbnail} alt={item.title} />
               <div>
+                {/* Item title */}
                 <h3>{item.title}</h3>
+                {/* Item price */}
                 <h4>${item.price.toFixed(2)}</h4>
-                <p>Quantity: {cartItems.length}</p>
+                {/* Item quantity */}
+                <p>Quantity: {item.qty}</p>
               </div>
             </div>
           ))
