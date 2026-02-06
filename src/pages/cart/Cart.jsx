@@ -15,7 +15,7 @@ export default function Cart() {
         ) : (
           // Each card
           cartItems.map((item) => (
-            <div key={item.id} className={styles.card}>
+            <div key={item.cardItemId} className={styles.card}>
               {/* Item Image */}
               <img src={item.thumbnail} alt={item.title} />
               <div>

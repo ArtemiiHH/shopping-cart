@@ -27,7 +27,7 @@ function App() {
         return updated;
       }
 
-      return [...prev, { ...product, qty }];
+      return [...prev, { ...product, qty, cardItemId: crypto.randomUUID() }];
     });
   }
 
