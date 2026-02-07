@@ -11,6 +11,10 @@ export default function Cart() {
     (sum, item) => sum + item.price * item.qty,
     0,
   );
+  // Calculate VAT %
+  const vat = totalPrice * 0.2;
+  // Total price with VAT
+  const totalWithVAT = totalPrice + vat;
 
   return (
     <section>
@@ -38,8 +42,10 @@ export default function Cart() {
           {/* Total Amount Box */}
           <div className={styles.totalBox}>
             <h2>Order summary:</h2>
-            <h3>Total: ${totalPrice.toFixed(2)}</h3>
-            <p>Subtotal x ({totalQty} items)</p>
+            <p>{`Subtotal x (${totalQty === 1 ? totalQty + " " + "item" : totalQty + " " + "items"})`}</p>
+            <p>+VAT %20 (${vat})</p>
+            <hr />
+            <h3>Total: ${totalWithVAT.toFixed(2)}</h3>
           </div>
         </>
       )}
