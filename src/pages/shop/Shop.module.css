@@ -7,7 +7,6 @@
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  /* padding: 30px; */
   gap: 20px;
   height: auto;
   justify-content: center;

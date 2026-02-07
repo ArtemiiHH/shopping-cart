@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  gap: 30px;
 }
 
 /* Left / Right zones must be allowed to shrink */
