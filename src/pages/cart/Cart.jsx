@@ -1,4 +1,3 @@
-// Cart.jsx
 import styles from "./Cart.module.css";
 import { useOutletContext } from "react-router";
 
