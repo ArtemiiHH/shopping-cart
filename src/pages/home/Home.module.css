@@ -1,11 +1,18 @@
 .home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* margin: 0 auto; */
+  gap: 30px;
+  margin: 0 auto;
   height: 100%;
 }
 
 .home img {
   height: 600px;
   width: auto;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }

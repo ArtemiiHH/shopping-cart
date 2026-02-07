@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   width: 100%;
-  border-bottom: 1px solid black;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
 .logo {
