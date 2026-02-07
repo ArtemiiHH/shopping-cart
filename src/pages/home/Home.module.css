@@ -16,3 +16,7 @@
   flex-direction: column;
   align-self: center;
 }
+
+.imageBox {
+  background-color: rgb(235, 235, 235);
+}

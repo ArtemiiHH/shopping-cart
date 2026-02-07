@@ -19,7 +19,9 @@ export default function Home() {
 
       {/* Right side */}
       <div className="right-side">
-        <img src="../src/assets/images/watch.jpg" />
+        <div>
+          <img src="../src/assets/images/watch3.png" />
+        </div>
       </div>
     </section>
   );
