@@ -27,7 +27,7 @@ export default function Home() {
         <div className={styles.imageBox}>
           <img
             className={styles.heroImage}
-            src="../src/assets/images/watch3.png"
+            src="../src/assets/images/watch.png"
             alt="Watch"
           />
         </div>
