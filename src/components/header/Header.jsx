@@ -14,7 +14,7 @@ export default function Header({ cartItems }) {
 
       {/* Logo */}
       <h1 className={styles.logo}>
-        <Link to="/">wwwatch.com</Link>
+        <Link to="/">WWWATCH</Link>
       </h1>
 
       {/* Cart Link */}
