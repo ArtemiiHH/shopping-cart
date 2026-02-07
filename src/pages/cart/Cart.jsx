@@ -4,43 +4,43 @@ import { useOutletContext } from "react-router";
 export default function Cart() {
   const { cartItems } = useOutletContext();
 
+  // Count total item quantity
+  const totalQty = cartItems.reduce((sum, item) => sum + item.qty, 0);
+  // Count total items price
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + item.price * item.qty,
+    0,
+  );
+
   return (
     <section>
       <h2>Selected items</h2>
 
-      {/* Show empty text */}
+      {/* Empty text */}
       {cartItems.length === 0 ? (
         <h3 className={styles.emptyText}>Your cart is empty</h3>
       ) : (
         <>
-          {/* Each item */}
-          {cartItems.map((item) => (
-            <div className={styles.grid}>
-              {/* Cart grid */}
-              <div key={item.cardItemId} className={styles.card}>
-                {/* Item Image */}
+          {/* Each Item */}
+          <div className={styles.grid}>
+            {cartItems.map((item) => (
+              <div key={item.cartItemId} className={styles.card}>
                 <img src={item.thumbnail} alt={item.title} />
                 <div>
-                  {/* Item title */}
                   <h3>{item.title}</h3>
-                  {/* Item price */}
-                  <h4>Total price: ${item.price * item.qty}</h4>
-                  {/* Item quantity */}
+                  <h4>Line total: ${(item.price * item.qty).toFixed(2)}</h4>
                   <p>Quantity: {item.qty}</p>
                 </div>
               </div>
+            ))}
+          </div>
 
-              {/* Total amount box */}
-              <div className={styles.totalBox}>
-                {/* Order summary */}
-                <h2>Order summary:</h2>
-                {/* Total price */}
-                <h3>{`Total:$${item.price * item.qty}`}</h3>
-                {/* Subtotal */}
-                <p>{`Subtotal x (${item.qty} items)`}</p>
-              </div>
-            </div>
-          ))}
+          {/* Total Amount Box */}
+          <div className={styles.totalBox}>
+            <h2>Order summary:</h2>
+            <h3>Total: ${totalPrice.toFixed(2)}</h3>
+            <p>Subtotal x ({totalQty} items)</p>
+          </div>
         </>
       )}
     </section>
