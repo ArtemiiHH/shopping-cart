@@ -50,7 +50,6 @@
   padding: 12px 16px;
   border-radius: 12px;
   font-weight: 600;
-  text-decoration: none;
 
   background: #111;
   color: #fff;
@@ -63,7 +62,9 @@
 
 .shopBtn:hover {
   transform: translateY(-2px);
+  opacity: 0.8;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+  text-decoration: none;
 }
 
 .shopBtn:active {
@@ -89,7 +90,7 @@
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
   overflow: hidden;
 }
-  
+
 .heroImage {
   width: 95%;
   height: auto;

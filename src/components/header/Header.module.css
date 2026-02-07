@@ -1,27 +1,48 @@
 .header {
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 30px 50px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
 
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Left / Right zones must be allowed to shrink */
+.left,
+.right {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.left {
+  justify-self: start;
+  overflow: hidden;
+}
+
+.right {
+  justify-self: end;
+}
+
+/* Logo */
 .logo {
   justify-self: center;
-  align-self: center;
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.06em;
 }
 
-.logo a:hover {
+.logo a {
   text-decoration: none;
-}
-
-.header ul {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 50px;
-  gap: 50px;
-}
-
-.header h1 {
-  justify-self: center;
+  color: inherit;
 }

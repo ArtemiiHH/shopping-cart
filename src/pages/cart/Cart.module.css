@@ -1,36 +1,134 @@
+/* Layout */
 .grid {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-height: 80vh;
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 16px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 320px;
   gap: 20px;
+  align-items: start;
 }
 
+/* Left column wrapper (cards) */
+.items {
+  display: grid;
+  gap: 14px;
+}
+
+/* Card */
 .card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 14px;
   align-items: center;
-  background-color: rgb(235, 235, 235);
-  border-radius: 20px;
-  height: auto;
-  min-width: 50%;
+
+  background: #f2f2f2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-.emptyText {
-  justify-self: center;
-  align-self: center;
+.card img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.totalBox {
-  background-color: rgb(235, 235, 235);
-  border-radius: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-self: flex-end;
-  height: auto;
-  width: 50%;
+/* Text inside card */
+.card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.05rem;
+  line-height: 1.2;
 }
 
-/* .totalBox * {
+.card h4 {
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.72);
+}
+
+.card p {
   margin: 0;
-} */
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Summary box */
+.totalBox {
+  background: #f2f2f2;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+
+  position: sticky;
+  top: 16px;
+}
+
+.totalBox h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.totalBox p {
+  margin: 8px 0;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.totalBox hr {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 12px 0;
+}
+
+.totalBox h3 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+/* Empty state */
+.emptyText {
+  width: min(1100px, 100%);
+  margin: 40px auto 0;
+  padding: 28px 16px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px dashed rgba(0, 0, 0, 0.15);
+  border-radius: 18px;
+}
+
+.title {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .totalBox {
+    position: static;
+  }
+}
+
+@media (max-width: 520px) {
+  .card {
+    grid-template-columns: 72px 1fr;
+  }
+
+  .card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+  }
+}

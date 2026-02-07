@@ -1,3 +1,4 @@
+// Cart.jsx
 import styles from "./Cart.module.css";
 import { useOutletContext } from "react-router";
 
@@ -6,46 +7,59 @@ export default function Cart() {
 
   // Count total item quantity
   const totalQty = cartItems.reduce((sum, item) => sum + item.qty, 0);
+
   // Count total items price
   const totalPrice = cartItems.reduce(
     (sum, item) => sum + item.price * item.qty,
     0,
   );
-  // Calculate VAT %
+
+  // Calculate VAT 20%
   const vat = totalPrice * 0.2;
+
   // Total price with VAT
   const totalWithVAT = totalPrice + vat;
 
   return (
     <section>
-      <h2>Selected items</h2>
+      <h2 className={styles.title}>Selected items</h2>
 
       {/* Empty text */}
       {cartItems.length === 0 ? (
         <h3 className={styles.emptyText}>Your cart is empty</h3>
       ) : (
         <>
-          {/* Each Item */}
+          {/* Items + Summary layout */}
           <div className={styles.grid}>
-            {cartItems.map((item) => (
-              <div key={item.cartItemId} className={styles.card}>
-                <img src={item.thumbnail} alt={item.title} />
-                <div>
-                  <h3>{item.title}</h3>
-                  <h4>Line total: ${(item.price * item.qty).toFixed(2)}</h4>
-                  <p>Quantity: {item.qty}</p>
+            {/* Left column: items */}
+            <div className={styles.items}>
+              {cartItems.map((item) => (
+                <div key={item.cartItemId} className={styles.card}>
+                  <img src={item.thumbnail} alt={item.title} />
+                  <div>
+                    <h3>{item.title}</h3>
+                    <h4>Line total: ${(item.price * item.qty).toFixed(2)}</h4>
+                    <p>Quantity: {item.qty}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* Total Amount Box */}
-          <div className={styles.totalBox}>
-            <h2>Order summary:</h2>
-            <p>{`Subtotal x (${totalQty === 1 ? totalQty + " " + "item" : totalQty + " " + "items"})`}</p>
-            <p>+VAT %20 (${vat})</p>
-            <hr />
-            <h3>Total: ${totalWithVAT.toFixed(2)}</h3>
+            {/* Right column: order summary */}
+            <div className={styles.totalBox}>
+              <h2>Order summary:</h2>
+
+              <p>
+                Subtotal x{" "}
+                {totalQty === 1 ? `${totalQty} item` : `${totalQty} items`}
+              </p>
+
+              <p>+VAT 20% (${vat.toFixed(2)})</p>
+
+              <hr />
+
+              <h3>Total: ${totalWithVAT.toFixed(2)}</h3>
+            </div>
           </div>
         </>
       )}
