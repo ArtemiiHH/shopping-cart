@@ -1,6 +1,5 @@
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   min-height: 80vh;
