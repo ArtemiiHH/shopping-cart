@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import styles from "./Home.module.css";
+import watchImage from "../../assets/images/watch.png";
 
 export default function Home() {
   return (
@@ -25,11 +26,7 @@ export default function Home() {
       {/* Right side */}
       <div className={styles.rightColumn}>
         <div className={styles.imageBox}>
-          <img
-            className={styles.heroImage}
-            src="../src/assets/images/watch.png"
-            alt="Watch"
-          />
+          <img className={styles.heroImage} src={watchImage} alt="Watch" />
         </div>
       </div>
     </section>
