@@ -10,6 +10,10 @@
   align-items: start;
 }
 
+.container {
+  padding-top: 100px;
+}
+
 /* Left column wrapper (cards) */
 .items {
   display: grid;
@@ -68,7 +72,7 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 
   position: sticky;
-  top: 16px;
+  top: 100px;
 }
 
 .totalBox h2 {

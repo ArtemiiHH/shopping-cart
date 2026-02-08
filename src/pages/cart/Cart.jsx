@@ -20,7 +20,7 @@ export default function Cart() {
   const totalWithVAT = totalPrice + vat;
 
   return (
-    <section>
+    <section className={styles.container}>
       <h2 className={styles.title}>Selected items</h2>
 
       {/* Empty text */}

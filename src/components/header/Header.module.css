@@ -3,10 +3,13 @@
   max-width: 100%;
   box-sizing: border-box;
   padding: 30px 50px;
+  background-color: white;
 
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
+  position: fixed;
+  z-index: 1;
 
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
 }
