@@ -1,44 +1,23 @@
-Shopping Cart Website
+# Shopping Cart Website
 
 Live Demo: https://shopping-cart-artemii.netlify.app/
 
-A simple shopping cart web application built with React and React Router.
+A simple shopping cart application built with React and React Router.
 
-Features
+## Features
 
-Browse products
+- Browse products
+- Add items to cart
+- Update quantities
+- View total price
 
-Add items to cart
+## Installation
 
-Adjust item quantity
-
-View total price
-
-Responsive layout
-
-Built With
-
-React
-
-React Router
-
-CSS Modules
-
-Installation
-
-Clone the repository:
-
-git clone <your-repo-url>
-
-Install dependencies:
-
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
 npm install
-
-Run the development server:
-
 npm run dev
-Build for Production
-npm run build
-Deployment
 
-Deployed with Netlify.
+## Build
+
+npm run build
